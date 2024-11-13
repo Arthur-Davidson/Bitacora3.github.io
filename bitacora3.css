@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Colores */
+    --Colo1: #186372;
+    --Colo2: #506266;
+    --Colo3: #818274;
+    --Colo4: #A3AB78;
+    --Colo5: #7a9120;
+    /* Colores Brillosos */
+    --Colo1B: #84eaff;
+    --Colo2B: #d4e9ee;
+    --Colo3B: #818274;
+    --Colo4B: #f1ffa3;
+    --Colo5B: #e1ecbc;
+
+    /* Colores Oscuros */
+    --Colo1O: #03323b;
+    --Colo2O: #07343f;
+    --Colo3O: #2f3026;
+    --Colo4O: #3b3f24;
+    --Colo5O: #2f3b01;
+
+    --Blanco: #f8f8f8;
+    --Negro: #000207;
+    --NegroF: #031412;
+    --NegroF2: #031412c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*Esto hace que el scroll sea fluido */
+}
+
+body,
+html {
+    overflow-x: hidden;
+    /*Esto quita la barra de deslizamiento horizontal*/
+}
+
+body {
+    background-color: var(--Blanco);
+}
+
+/*/////////////////////////// TITULOS Y PARRAFOS ///////////////////////////////////*/
+
+h1 {
+    font-size: 10vmin;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: var(--Colo2);
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    color: var(--Colo5);
+    border-bottom: solid 5px var(--Colo5);
+    padding: 0 15px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px 0;
+    color: var(--Colo4B);
+}
+
+h4 {
+    font-size: 1.75rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px 0;
+    color: var(--Colo2O);
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 10px 0;
+    color: var(--Colo2);
+}
+
+p {
+    font-size: 1em;
+    color: var(--Negro);
+    font-family: "Merriweather Sans", sans-serif;
+    font-style: normal;
+    margin: 8px 0;
+}
+
+/*/////////////////////////// BARRA DE NAVEGACION ///////////////////////////////////*/
+
+#navbar {
+    background-color: var(--NegroF);
+    box-shadow: 2px 2px 5px var(--Colo2);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.nav-links {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    background-color: var(--Colo2O);
+    color: var(--Colo4B);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    width: 15%;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: var(--Colo4B);
+    color: var(--Colo2O);
+    box-shadow: 0px 5px 25px 8px var(--Colo1B);
+    transform: scale(1.2);
+}
+
+.nav-links .btn {
+    background-color: var(--Colo5O);
+    color: var(--Colo4B);
+    margin: 10px 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links .btn:hover {
+    background-color: var(--Colo4B);
+    color: var(--Colo5);
+    box-shadow: 0px 5px 25px 8px var(--Colo5);
+    transform: scale(1.2);
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+/*/////////////////////////// ENCABEZADO ///////////////////////////////////*/
+
+header {
+    width: 100%;
+    height: 500px;
+    background-color: var(--Colo4B);
+    background-image: url('imgs/Fondo-Header.jpg');
+    filter:hue-rotate(-18deg) ;
+    box-shadow: inset 0px -20px 20px 4px var(--Colo2);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-content {
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-top: 10px;
+}
+
+.header-content h3 {
+    color: var(--Colo5O);
+    font-size: 4vmin;
+}
+
+/*/////////////////////////// SECCIONES (TEMAS) ///////////////////////////////////*/
+
+#Temas {
+    width: 100%;
+    height: auto;
+}
+
+[id*="tema"] {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+
+}
+
+/*/////////////////////////// TITULOS DE LOS TEMAS ///////////////////////////////////*/
+
+.titulo_Tema {
+    background-color: var(--Colo5B);
+    box-shadow: 0px 5px 25px 8px var(--Colo4O);
+    border-radius: 15px;
+    width: 97%;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*/////////////////////////// CONTENIDOS (INFORMACION) ///////////////////////////////////*/
+
+.contenidos {
+    width: 95%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contenido1 {
+    background-color: var(--Colo1);
+    box-shadow: 0px 5px 25px 8px var(--Colo4O);
+    border-radius: 15px;
+    width: 55%;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido2 {
+    background-color: var(--Colo2O);
+    box-shadow: 0px 5px 25px 8px var(--Colo4O);
+    border-radius: 15px;
+    width: 42%;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*/////////////////////////// RESUMEN ///////////////////////////////////*/
+
+.resumen {
+    background-color: var(--Colo2);
+    box-shadow: 0px 5px 25px 8px var(--Colo4O);
+    border-radius: 15px;
+    width: 97%;
+    height: auto;
+    padding: 10px 5px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*/////////////////////////// TEXTO E IMAGENES ///////////////////////////////////*/
+
+.texto {
+    background-color: var(--Blanco);
+    box-shadow: inset 0px 0px 20px 1px var(--Colo2);
+    border-radius: 15px;
+    width: 95%;
+    padding: 25px;
+}
+
+.code {
+    background-color: #f1ffa3;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--Colo1);
+    width: 50%;
+    padding: 10px;
+    box-shadow: inset 0px 0px 5px 0px var(--Colo2);
+}
+
+li {
+    font-size: 1em;
+    margin: 15px 15px;
+    color: var(--Colo5O);
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.imagen {
+    margin: 25px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.imagen img {
+    border: 3px solid var(--Negro);
+    box-shadow: 0px 5px 25px 8px var(--NegroF);
+    border-radius: 10px;
+    width: 85%;
+    filter: brightness(90%);
+    transition: 0.3s;
+}
+
+.imagen img:hover {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+
+/*/////////////////////////// PIE DE PAGINA ///////////////////////////////////*/
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--NegroF);
+    box-shadow: 0px -20px 19px 13px var(--NegroF);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.derechos {
+    width: 80%;
+    height: auto;
+}
+.derechos p{
+    color: var(--Colo2B);
+    margin: 10px 0;
+}
+
+.politica {
+    width: 15%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a {
+    background-color: var(--Colo2O);
+    color: var(--Colo4B);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    width: 95%;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    background-color: var(--Colo4B);
+    color: var(--Colo2O);
+    box-shadow: 0px 5px 25px 8px var(--Colo1B);
+    transform: scale(1.2);
+}
+
+.copyrais {
+    background-color: var(--Negro);
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    color: var(--Colo2B);
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 15px;
+}
+
+
+/* TRANSFORMACION A RESPONSIVO */
+
+@media screen and (max-width:930px) {
+
+    /* Menu De Hamburguesa */
+    .menu-btn {
+        display: block;
+    }
+
+    #navbar {
+        background-color: var(--NegroF2);
+        padding: 0;
+    }
+ 
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        margin-top: -810px;
+        transition: all 0.5s ease;
+    }
+
+    .mobile-menu {
+        margin-top: 0px;
+    }
+
+    .nav-links a {
+        margin: 15px auto;
+        width: 30%;
+        box-shadow: 0px 0px 13px 0px var(--Colo4B);
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .derechos {
+        width: 95%;
+    }
+
+    .politica {
+        width: 95%;
+        margin-top: 20px;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .contenidos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido1 {
+        width: 95%;
+        margin: 20px 0;
+    }
+
+    .contenido2 {
+        width: 95%;
+        margin: 10px 0;
+    }
+}
